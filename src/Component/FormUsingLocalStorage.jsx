@@ -37,9 +37,12 @@ function FormUsingLocalStorage() {
     localStorage.removeItem(key);
     SetDisplay((prev) => prev.filter((iteam) => iteam != task));
   };
-
+  const RemoveAllElement = () => {
+    localStorage.clear();
+     SetDisplay([]);// string nahi pass karne ka samaj kya kyu ki array pass kiya hai 
+  };
   return (
-    <div style={{ border: "2px solid black" }}>
+    <div style={{ border: "2px solid black",width:"100%" }}>
       <h1>Task Schedular</h1>
       <input
         type="text"
@@ -62,6 +65,16 @@ function FormUsingLocalStorage() {
         }}
       >
         Adding
+      </button>
+      <button
+        onClick={RemoveAllElement}
+        style={{
+          color: "black",
+          background: "yellow",
+          border: "2px solid balck",
+        }}
+      >
+        Clear All Data
       </button>
       {/* // <button onClick={displayTask}>DisplayIteam</button> */}
       <br />

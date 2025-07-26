@@ -35,20 +35,34 @@ function FormUsingLocalStorage() {
   const Remove = (task) => {
     let key = localStorage.key(task);
     localStorage.removeItem(key);
-    SetDisplay((prev) => prev.filter((iteam)=>iteam !=task ));
+    SetDisplay((prev) => prev.filter((iteam) => iteam != task));
   };
 
   return (
-    <div style={{border:"2px solid black"}}>
+    <div style={{ border: "2px solid black" }}>
       <h1>Task Schedular</h1>
       <input
         type="text"
         placeholder="Enter the Task"
         value={task}
         onChange={handlingInput}
-        style={{border:"2px solid cyan",height:"30px",width:"60%",margin:"0 10px"}}
+        style={{
+          border: "2px solid cyan",
+          height: "30px",
+          width: "60%",
+          margin: "0 10px",
+        }}
       />
-      <button onClick={AddingTask} style={{color:"black",background:"yellow" , border :"2px solid balck"}}>Adding</button>
+      <button
+        onClick={AddingTask}
+        style={{
+          color: "black",
+          background: "yellow",
+          border: "2px solid balck",
+        }}
+      >
+        Adding
+      </button>
       {/* // <button onClick={displayTask}>DisplayIteam</button> */}
       <br />
       <br />
@@ -57,11 +71,21 @@ function FormUsingLocalStorage() {
       {display.map((task, index) => (
         <>
           {" "}
-          <div style={{ display: "flex",justifyContent:"space-between" }}>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
             <h4 key={index} style={{ position: "relative" }}>
               {index + 1} : {task}
             </h4>
-            <button onClick={() => Remove(task)}  style={{right:"0",borderRadius:"50%",height:"50px"}}>R</button>
+            <button
+              onClick={() => Remove(task)}
+              style={{
+                right: "0",
+                borderRadius: "50%",
+                height: "50px",
+                border: "2px solid black",
+              }}
+            >
+              R
+            </button>
           </div>
         </>
       ))}

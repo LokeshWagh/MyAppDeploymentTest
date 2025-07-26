@@ -39,7 +39,7 @@ function FormUsingLocalStorage() {
   };
 
   return (
-    <div>
+    <div style={{border:"2px solid black"}}>
       <h1>Task Schedular</h1>
       <input
         type="text"
@@ -48,12 +48,12 @@ function FormUsingLocalStorage() {
         onChange={handlingInput}
         style={{border:"2px solid cyan",height:"30px",width:"60%",margin:"0 10px"}}
       />
-      <button onClick={AddingTask} style={{color:"black",background:"yellow"}}>Adding</button>
+      <button onClick={AddingTask} style={{color:"black",background:"yellow" , border :"2px solid balck"}}>Adding</button>
       {/* // <button onClick={displayTask}>DisplayIteam</button> */}
       <br />
       <br />
       <hr />
-      <h1>All Task of {today} </h1>
+      <h3>All Task of {today} </h3>
       {display.map((task, index) => (
         <>
           {" "}

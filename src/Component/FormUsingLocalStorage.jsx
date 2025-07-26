@@ -48,7 +48,7 @@ function FormUsingLocalStorage() {
         onChange={handlingInput}
         style={{border:"2px solid cyan",height:"30px",width:"60%",margin:"0 10px"}}
       />
-      <button onClick={AddingTask}>Adding</button>
+      <button onClick={AddingTask} style={{color:"black",background:"yellow"}}>Adding</button>
       {/* // <button onClick={displayTask}>DisplayIteam</button> */}
       <br />
       <br />
